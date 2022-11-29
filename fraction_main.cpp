@@ -107,7 +107,8 @@ int main() {
 	std::cout << std::endl;
 	std::cout << f2;
 	std::cout << std::endl << "Print operator successful" << std::endl;
-
+	
+	return 0;
 }
 
 
