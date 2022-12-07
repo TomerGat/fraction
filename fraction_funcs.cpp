@@ -50,12 +50,12 @@ Fraction::Fraction(int num) : numerator{ num }, denominator{ 1 } {}
 Fraction::Fraction() : numerator{ 0 }, denominator{ 1 } {}
 
 Fraction::Fraction(const std::string frac) { //passing fraction by value so I can pass a string without declaring it as a variable
-    std::stringstream ss;
+    std::stringstream stream;
     char temp;
-    ss << frac;
-    ss >> numerator;
-    ss >> temp;
-    ss >> denominator;
+    stream << frac;
+    stream >> numerator;
+    stream >> temp;
+    stream >> denominator;
     this->reduce();
 }
 
@@ -65,11 +65,11 @@ void Fraction::print_fraction() {
 }
 
 std::string Fraction::str() {
-    std::stringstream ss;
-    ss << numerator;
-    ss << "/";
-    ss << denominator;
-    return ss.str();
+    std::stringstream stream;
+    stream << numerator;
+    stream << "/";
+    stream << denominator;
+    return stream.str();
 }
 
 void Fraction::reduce() {
