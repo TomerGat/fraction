@@ -102,6 +102,7 @@ Fraction& Fraction::operator -=(const Fraction& rhs) {
     *this = temp;
     return *this;
 }
+
 Fraction& Fraction::operator /=(const Fraction& rhs) {
     Fraction temp(numerator * rhs.denominator, denominator * rhs.numerator);
     *this = temp;
